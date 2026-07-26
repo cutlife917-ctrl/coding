@@ -1,0 +1,477 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+ET
+
+/* ===========================
+   BODY
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle at top,#3b82f6 0%,transparent 60%);
+    opacity:.25;
+    z-index:-1;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:20px;
+    color:#dbeafe;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding-bottom:40px;
+}
+/* ===========================
+   SEARCH SECTION
+=========================== */
+
+.search-box{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+/* ===========================
+   SEARCH INPUT
+=========================== */
+
+.search-box input{
+
+    flex:1;
+    min-width:300px;
+
+    padding:15px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    background:white;
+    color:#111827;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.search-box button{
+
+    padding:14px 18px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.search-box button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+.search-box button:active{
+
+    transform:scale(0.96);
+
+}
+
+/* ===========================
+   LANGUAGE SELECT
+=========================== */
+
+.options{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+#language{
+
+    width:250px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    background:white;
+
+    color:#111827;
+
+    cursor:pointer;
+
+}
+/* ===========================
+   FEATURE CARDS
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    color:white;
+    transition:0.3s;
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    background:rgba(255,255,255,0.18);
+}
+
+.card h3{
+    margin:15px 0 10px;
+    font-size:22px;
+    color:#ffffff;
+}
+
+.card p{
+    font-size:15px;
+    color:#dbeafe;
+}
+
+/* ===========================
+   CARD ICONS
+=========================== */
+
+.card{
+    font-size:45px;
+}
+
+/* ===========================
+   SMOOTH ANIMATION
+=========================== */
+
+.card{
+    animation:fadeIn .7s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/* ===========================
+   AI ANSWER
+=========================== */
+
+#answer{
+    margin-top:30px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:25px;
+    color:white;
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+#answer h2{
+    margin-bottom:15px;
+    color:#ffffff;
+    font-size:28px;
+}
+
+#response{
+    line-height:1.8;
+    font-size:16px;
+    color:#e5e7eb;
+}
+
+#response ul{
+    margin-top:10px;
+    margin-left:20px;
+}
+
+#response li{
+    margin-bottom:8px;
+}
+
+/* ===========================
+   IMAGE BOX
+=========================== */
+
+.imageBox{
+    margin-top:30px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.imageBox h2{
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+#topicImage{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid rgba(255,255,255,0.2);
+}
+
+/* ===========================
+   3D MODEL
+=========================== */
+
+.modelBox{
+    margin-top:30px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.modelBox h2{
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+model-viewer{
+    width:100%;
+    height:500px;
+    border-radius:15px;
+    background:#ffffff;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+.animationBox{
+    margin-top:30px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.animationBox h2{
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+#animation{
+    width:100%;
+    border-radius:15px;
+}
+/* ===========================
+   DOWNLOAD SECTION
+=========================== */
+
+.downloadSection{
+    margin-top:30px;
+    padding:25px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+}
+
+.downloadSection h2{
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+.downloadSection button{
+    margin:8px;
+    padding:12px 22px;
+    border:none;
+    border-radius:12px;
+    background:#10b981;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.downloadSection button:hover{
+    background:#059669;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    text-align:center;
+    padding:30px 20px;
+    color:#dbeafe;
+    font-size:15px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width:768px){
+
+    header h1{
+        font-size:34px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box input{
+        min-width:100%;
+    }
+
+    .search-box button{
+        width:100%;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    model-viewer{
+        height:300px;
+    }
+
+    #topicImage{
+        max-height:300px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    #answer,
+    .imageBox,
+    .modelBox,
+    .animationBox,
+    .downloadSection{
+        padding:15px;
+    }
+
+    footer{
+        font-size:13px;
+    }
+
+}
+
+/* ===========================
+   GLOBAL FADE ANIMATION
+=========================== */
+
+#answer,
+.imageBox,
+.modelBox,
+.animationBox,
+.downloadSection{
+    animation:fadeUp .7s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
